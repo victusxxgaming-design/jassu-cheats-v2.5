@@ -19,7 +19,7 @@ export const Route = createFileRoute("/product/$slug")({
     return { p };
   },
   head: ({ loaderData }) => {
-    const t = loaderData ? `${loaderData.p.name} — Vantix` : "Product — Vantix";
+    const t = loaderData ? `${loaderData.p.name} — Jassu Cheats` : "Product — Jassu Cheats";
     const d = loaderData ? loaderData.p.tagline : "Product details";
     return { meta: [{ title: t }, { name: "description", content: d }, { property: "og:title", content: t }, { property: "og:description", content: d }, { property: "og:type", content: "product" }, { name: "twitter:card", content: "summary_large_image" }] };
   },

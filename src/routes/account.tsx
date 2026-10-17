@@ -13,7 +13,7 @@ import { seo } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/account")({
-  head: () => seo("My account", "Your Vantix dashboard: purchases, orders, keys and downloads."),
+  head: () => seo("My account", "Your Jassu Cheats dashboard: purchases, orders, keys and downloads."),
   component: () => (
     <RequireAuth>
       <Account />

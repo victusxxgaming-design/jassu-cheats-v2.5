@@ -9,7 +9,7 @@ import { supabase } from "@/lib/supabase";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/reset-password")({
-  head: () => seo("Set a new password", "Choose a new password for your Vantix account."),
+  head: () => seo("Set a new password", "Choose a new password for your Jassu Cheats account."),
   component: ResetPassword,
 });
 

@@ -16,7 +16,7 @@ import {
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/admin")({
-  head: () => ({ meta: [{ title: "Admin — Vantix" }, { name: "description", content: "Vantix store administration." }, { property: "og:title", content: "Admin — Vantix" }, { property: "og:description", content: "Store administration." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }, { name: "robots", content: "noindex" }] }),
+  head: () => ({ meta: [{ title: "Admin — Jassu Cheats" }, { name: "description", content: "Jassu Cheats store administration." }, { property: "og:title", content: "Admin — Jassu Cheats" }, { property: "og:description", content: "Store administration." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }, { name: "robots", content: "noindex" }] }),
   component: () => (
     <RequireAuth admin>
       <Admin />
@@ -343,7 +343,7 @@ function Coupons() {
       <DialogContent className="bg-popover">
         <DialogHeader><DialogTitle>Create coupon</DialogTitle></DialogHeader>
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Code"><input id="cp-code" className={inputCls} placeholder="VANTIX10" /></Field>
+          <Field label="Code"><input id="cp-code" className={inputCls} placeholder="JASSU10" /></Field>
           <Field label="Discount %"><input id="cp-pct" type="number" min="1" max="100" className={inputCls} placeholder="10" /></Field>
         </div>
         <DialogFooter><Button variant="ghost" onClick={() => setOpen(false)}>Cancel</Button><Button variant="hero" onClick={create}>Create</Button></DialogFooter>
@@ -373,7 +373,7 @@ function SettingsSec() {
   const save = async () => {
     const g = (id: string) => (document.getElementById(id) as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null)?.value ?? "";
     const s: StoreSettings = {
-      store_name: g("set-name") || "Vantix",
+      store_name: g("set-name") || "Jassu Cheats",
       currency: g("set-currency") || "USD",
       fee_rate: Number(g("set-fee") || 5) / 100,
       maintenance_mode: (document.getElementById("set-maint") as HTMLInputElement)?.checked ?? false,
@@ -392,7 +392,7 @@ function SettingsSec() {
     }
   };
   return <div className="grid gap-6 xl:grid-cols-2">
-    <Card className="space-y-4"><h2 className="font-semibold">Store settings</h2><Field label="Store name"><input id="set-name" className={inputCls} defaultValue={settings?.store_name ?? "Vantix"} /></Field><Field label="Currency"><select id="set-currency" className={inputCls} defaultValue={settings?.currency ?? "USD"}><option>USD</option><option>INR</option><option>BRL</option></select></Field><Field label="Tax / fee rate (%)"><input id="set-fee" type="number" step="0.1" className={inputCls} defaultValue={String((settings?.fee_rate ?? 0.05) * 100)} /></Field>
+    <Card className="space-y-4"><h2 className="font-semibold">Store settings</h2><Field label="Store name"><input id="set-name" className={inputCls} defaultValue={settings?.store_name ?? "Jassu Cheats"} /></Field><Field label="Currency"><select id="set-currency" className={inputCls} defaultValue={settings?.currency ?? "USD"}><option>USD</option><option>INR</option><option>BRL</option></select></Field><Field label="Tax / fee rate (%)"><input id="set-fee" type="number" step="0.1" className={inputCls} defaultValue={String((settings?.fee_rate ?? 0.05) * 100)} /></Field>
       <label className="flex items-center gap-2 text-sm"><input id="set-maint" type="checkbox" defaultChecked={settings?.maintenance_mode ?? false} className="accent-primary" />Maintenance mode</label><Button variant="hero" disabled={saving} onClick={save}>{saving ? "Saving…" : "Save"}</Button></Card>
     <Card className="space-y-4"><h2 className="font-semibold">Support settings</h2><Field label="Support email"><input id="set-email" className={inputCls} defaultValue={settings?.support_email ?? "support@jassucheats.store"} placeholder="support@yourstore.com" /></Field><Field label="Discord invite URL"><input id="set-discord" className={inputCls} defaultValue={settings?.discord_invite ?? "https://discord.gg/DARKJVGGY"} placeholder="https://discord.gg/..." /></Field><Field label="Auto-reply message"><textarea id="set-reply" className={cn(inputCls, "h-24 py-2")} defaultValue={settings?.auto_reply ?? "Thanks for reaching out — we'll reply within a few hours."} /></Field><Button variant="hero" disabled={saving} onClick={save}>{saving ? "Saving…" : "Save"}</Button></Card>
   </div>;

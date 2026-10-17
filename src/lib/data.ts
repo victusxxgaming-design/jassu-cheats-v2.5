@@ -31,7 +31,7 @@ export const FAQS = [
   { q: "How do I receive my purchase?", a: "Right after payment is confirmed, your activation key and the latest download appear on the order page and in your dashboard." },
   { q: "Do I get older versions?", a: "We only ship the latest stable version of each product. Updates within your license period are included." },
   { q: "Which payment methods are supported?", a: "Cards, PayPal, UPI and selected crypto options (shown at checkout)." },
-  { q: "Is Vantix affiliated with the game publisher?", a: "No. Vantix is an independent store and is not affiliated with, endorsed or sponsored by any game publisher." },
+  { q: "Is Jassu Cheats affiliated with the game publisher?", a: "No. Jassu Cheats is an independent store and is not affiliated with, endorsed or sponsored by any game publisher." },
   { q: "What if my key doesn't work?", a: "Open a ticket or reach us on Discord — our team replies within a few hours, every day." },
 ];
 

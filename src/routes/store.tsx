@@ -16,7 +16,7 @@ export const Route = createFileRoute("/store")({
     platform: ["pc", "ios", "other"].includes(s.platform as string) ? (s.platform as Platform) : undefined,
     q: typeof s.q === "string" && s.q ? s.q : undefined,
   }),
-  head: () => seo("Store", "Browse every Vantix addon for PC, iOS and more. Latest versions only."),
+  head: () => seo("Store", "Browse every Jassu Cheats addon for PC, iOS and more. Latest versions only."),
   component: Store,
 });
 

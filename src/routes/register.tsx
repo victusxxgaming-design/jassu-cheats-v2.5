@@ -10,7 +10,7 @@ import { supabase } from "@/lib/supabase";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/register")({
-  head: () => seo("Create account", "Create a Vantix account to manage purchases, keys and downloads."),
+  head: () => seo("Create account", "Create a Jassu Cheats account to manage purchases, keys and downloads."),
   component: Register,
 });
 

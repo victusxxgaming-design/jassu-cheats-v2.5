@@ -14,7 +14,7 @@ import { Summary, FEE_RATE } from "@/components/summary";
 import { RequireAuth } from "@/components/require-auth";
 
 export const Route = createFileRoute("/checkout")({
-  head: () => seo("Checkout", "Secure checkout for your Vantix order."),
+  head: () => seo("Checkout", "Secure checkout for your Jassu Cheats order."),
   component: () => (
     <RequireAuth>
       <Checkout />

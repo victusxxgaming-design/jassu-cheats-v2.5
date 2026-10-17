@@ -17,7 +17,7 @@ export function Logo() {
       <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-primary shadow-glow">
         <svg viewBox="0 0 24 24" className="h-4 w-4 fill-primary-foreground"><path d="M3 4h4l5 11 5-11h4l-7.5 16h-3z" /></svg>
       </span>
-      <span className="font-display text-xl font-bold uppercase tracking-wider">Vantix</span>
+      <span className="font-display text-xl font-bold uppercase tracking-wider">Jassu Cheats</span>
     </Link>
   );
 }
@@ -110,7 +110,7 @@ export function Footer() {
         ))}
       </div>
       <div className="border-t">
-        <p className="container-x py-6 text-xs text-muted-foreground">© 2026 Vantix Digital. Independent store — not affiliated with, endorsed by, or sponsored by Garena or Free Fire.</p>
+        <p className="container-x py-6 text-xs text-muted-foreground">© 2026 Jassu Cheats. Independent store — not affiliated with, endorsed by, or sponsored by Garena or Free Fire.</p>
       </div>
     </footer>
   );
