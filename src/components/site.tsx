@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Search, ShoppingBag, User, Menu, X, Monitor, Apple, Boxes, MessageCircle, Star } from "lucide-react";
+import { Search, ShoppingBag, User, Shield, Menu, X, Monitor, Apple, Boxes, MessageCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/lib/cart";
 import { useAuth } from "@/lib/auth";
@@ -30,7 +30,7 @@ const NAV = [
 
 export function Header() {
   const { items } = useCart();
-  const { user, signOut } = useAuth();
+  const { user, signOut, isAdmin } = useAuth();
   const [open, setOpen] = useState(false);
   const [q, setQ] = useState("");
   const nav = useNavigate();
@@ -53,6 +53,7 @@ export function Header() {
             className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground" />
         </form>
         <div className="ml-auto lg:ml-0 flex items-center gap-1">
+          {isAdmin && <Button variant="ghost" size="icon" asChild aria-label="Admin panel"><Link to="/admin"><Shield /></Link></Button>}
           <Button variant="ghost" size="icon" asChild aria-label="Account"><Link to="/account"><User /></Link></Button>
           <Button variant="ghost" size="icon" asChild aria-label="Cart">
             <Link to="/cart" className="relative">
@@ -72,6 +73,7 @@ export function Header() {
             {user ? (
               <>
                 <Link to="/account" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 text-sm hover:bg-surface">My account</Link>
+                {isAdmin && <Link to="/admin" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 text-sm hover:bg-surface">Admin panel</Link>}
                 <button onClick={() => { setOpen(false); void signOut(); }} className="rounded-lg px-3 py-3 text-left text-sm hover:bg-surface">Sign out</button>
               </>
             ) : (
@@ -88,7 +90,7 @@ export function Footer() {
   const cols = [
     { t: "Shop", l: [["/store", "All products"], ["/store", "Latest releases"], ["/cart", "Cart"]] },
     { t: "Support", l: [["/contact", "Contact"], ["/faq", "FAQ"], ["/account", "My keys"]] },
-    { t: "Company", l: [["/about", "About"], ["/admin", "Admin demo"], ["/maintenance", "Status"]] },
+    { t: "Company", l: [["/about", "About"], ["/maintenance", "Status"]] },
     { t: "Legal", l: [["/terms", "Terms"], ["/privacy", "Privacy"], ["/refund", "Refunds"]] },
   ] as const;
   return (
