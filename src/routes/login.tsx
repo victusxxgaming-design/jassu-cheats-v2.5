@@ -11,7 +11,7 @@ import { useAuth } from "@/lib/auth";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/login")({
-  head: () => seo("Sign in", "Sign in to your Vantix account to access keys and downloads."),
+  head: () => seo("Sign in", "Sign in to your Jassu Cheats account to access keys and downloads."),
   component: Login,
 });
 

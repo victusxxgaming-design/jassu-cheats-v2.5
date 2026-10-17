@@ -10,7 +10,7 @@ export function AuthLayout({ title, sub, children, discord = true }: { title: st
         <img src={hero} alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         <div className="absolute bottom-12 left-12 right-12">
-          <p className="eyebrow">Vantix</p>
+          <p className="eyebrow">Jassu Cheats</p>
           <p className="mt-3 font-display text-3xl font-semibold max-w-sm">Your keys, downloads and updates — in one place.</p>
         </div>
       </div>

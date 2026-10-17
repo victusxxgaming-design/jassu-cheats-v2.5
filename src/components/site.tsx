@@ -8,16 +8,14 @@ import { platformLabel, money, type Product, type Platform } from "@/lib/data";
 import { consumeMorph } from "@/lib/morph";
 import { cn } from "@/lib/utils";
 import { AccountCard } from "@/components/account-card";
+import logoAsset from "@/assets/jassu-logo.png.asset.json";
 
 export const platformIcon = (p: Platform) => ({ pc: Monitor, ios: Apple, other: Boxes })[p];
 
 export function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-2 shrink-0">
-      <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-primary shadow-glow">
-        <svg viewBox="0 0 24 24" className="h-4 w-4 fill-primary-foreground"><path d="M3 4h4l5 11 5-11h4l-7.5 16h-3z" /></svg>
-      </span>
-      <span className="font-display text-xl font-bold uppercase tracking-wider">Vantix</span>
+    <Link to="/" className="flex items-center shrink-0" aria-label="Jassu Cheats home">
+      <img src={logoAsset.url} alt="Jassu Cheats" className="h-11 w-auto" />
     </Link>
   );
 }
@@ -110,7 +108,7 @@ export function Footer() {
         ))}
       </div>
       <div className="border-t">
-        <p className="container-x py-6 text-xs text-muted-foreground">© 2026 Vantix Digital. Independent store — not affiliated with, endorsed by, or sponsored by Garena or Free Fire.</p>
+        <p className="container-x py-6 text-xs text-muted-foreground">© 2026 Jassu Cheats. Independent store — not affiliated with, endorsed by, or sponsored by Garena or Free Fire.</p>
       </div>
     </footer>
   );

@@ -9,7 +9,7 @@ import { seo } from "@/lib/seo";
 import hero from "@/assets/hero.jpg";
 
 export const Route = createFileRoute("/")({
-  head: () => seo("Premium Game Addons", "Vantix is a premium marketplace for independently made game addons — latest versions only, instant delivery."),
+  head: () => seo("Premium Game Addons", "Jassu Cheats is a premium marketplace for independently made game addons — latest versions only, instant delivery."),
   component: Index,
 });
 

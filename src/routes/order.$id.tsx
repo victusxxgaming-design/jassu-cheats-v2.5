@@ -15,7 +15,7 @@ const STATES: KeyState[] = ["success", "pending", "unavailable", "expired", "fai
 
 export const Route = createFileRoute("/order/$id")({
   validateSearch: (s: Record<string, unknown>) => ({ state: (STATES.includes(s.state as KeyState) ? s.state : "success") as KeyState }),
-  head: ({ params }) => ({ meta: [{ title: `Order ${params.id} — Vantix` }, { name: "description", content: "Your order status, activation key and download." }, { property: "og:title", content: `Order ${params.id} — Vantix` }, { property: "og:description", content: "Order confirmation and activation key." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }, { name: "robots", content: "noindex" }] }),
+  head: ({ params }) => ({ meta: [{ title: `Order ${params.id} — Jassu Cheats` }, { name: "description", content: "Your order status, activation key and download." }, { property: "og:title", content: `Order ${params.id} — Jassu Cheats` }, { property: "og:description", content: "Order confirmation and activation key." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }, { name: "robots", content: "noindex" }] }),
   component: () => (
     <RequireAuth>
       <Order />

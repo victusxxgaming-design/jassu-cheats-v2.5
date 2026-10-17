@@ -9,7 +9,7 @@ import { seo } from "@/lib/seo";
 import { Summary, FEE_RATE } from "@/components/summary";
 
 export const Route = createFileRoute("/cart")({
-  head: () => seo("Your Cart", "Review the addons in your Vantix cart before checkout."),
+  head: () => seo("Your Cart", "Review the addons in your Jassu Cheats cart before checkout."),
   component: Cart,
 });
 
